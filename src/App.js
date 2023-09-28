@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import KeyPad from './components/keyPad';
+import Display from './components/display';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div key="display" id="display"></div>
+        <Display />
         <KeyPad />
       </div>
     </div>

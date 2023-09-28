@@ -1,6 +1,9 @@
 const Display = () => {
     return (
-        <div key="display" id="display"></div>
+        <div className="display-container">
+            <div className="displays">test</div>
+            <div className="displays" key="display" id="display">test</div>
+        </div>
     )
 }
 

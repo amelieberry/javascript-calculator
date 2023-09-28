@@ -14,22 +14,31 @@
 button {
   height: 50px;
   min-width: 50px;
-  /* width: 50px; */
   background-color: #B7B7B7;
-  border-radius: 5px;
+  border-radius: 50%;
+  border: 2px solid #999;
 }
 
-#display {
+button:active {
+  border: 3px solid #666;
+}
+
+.display-container {
   background-color: antiquewhite;
-  height: 50px;
+  height: 100px;
   border-radius: 5px;
   grid-row: 1;
   grid-column: 1 / span 2;
 }
 
+.displays {
+  padding: 1rem;
+  text-align: right;
+}
+
 .key-pad {
   display: grid;
-  gap: 10px;
+  gap: 5px;
 }
 
 .number-pad {
@@ -41,8 +50,9 @@ button {
   gap: 5px;
 }
 
-#decimal {
+#zero {
   grid-column: span 2;
+  border-radius: 999em;
 }
 
 .operator-pad {
@@ -63,9 +73,11 @@ button {
 #equals {
   background-color: #CC99CC;
   grid-row: 1 / span 2;
+  border-radius: 999em;
 }
 
 #clear {
   background-color: #828282;
   grid-row: 1 / span 2;
+  border-radius: 999em;
 }

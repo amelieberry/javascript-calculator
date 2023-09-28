@@ -1,73 +1,20 @@
 import React from 'react';
+import { operators, numPad, actionsPad } from './data/data';
 import './App.css';
 
-const numPad = [
-  {
-    text: '0',
-    id: 'zero'
-  },
-  {
-    text: '.',
-    id: 'decimal'
-  },
-  {
-    text: '1',
-    id: 'one'
-  },
-  {
-    text: '2',
-    id: 'two'
-  },
-  {
-    text: '3',
-    id: 'three'
-  },
-  {
-    text: '4',
-    id: 'four'
-  },
-  {
-    text: '5',
-    id: 'five'
-  },
-  {
-    text: '6',
-    id: 'six'
-  },
-  {
-    text: '7',
-    id: 'seven'
-  },
-  {
-    text: '8',
-    id: 'eight'
-  },
-  {
-    text: '9',
-    id: 'nine'
-  }
-]
-
-const operators = [
-  {
-    text: '+',
-    id: 'add'
-  },
-  {
-    text: '-',
-    id: 'subtract'
-  },
-  {
-    text: '*',
-    id: 'multiply'
-  },
-  {
-    text: '/',
-    id: 'divide'
-  },
-]
-
 function App() {
+
+  /** USER STORY 7
+   * At any time, pressing the clear button clears the input and output values, 
+   * and returns the calculator to its initialized state; 
+   * 0 should be shown in the element with the id of display.
+  */
+
+  // 1 - declare input value state with initial state of 0
+  // 2 - declare output value state
+  // 3 - clearDisplay function
+
+ 
   return (
     <div className="App">
       <div className="container">
@@ -82,8 +29,12 @@ function App() {
           )).reverse()}
         </div>
         <div className="action-pad">
-          <button key='clear' id="clear">C</button>
-          <button key="equals" id="equals">=</button>
+          {actionsPad.map((key) => (
+            <button
+            id={key.id}
+            key={key.id}
+            >{key.text}</button>
+          ))}
         </div>
         <div className="operator-pad">
         {operators.map((key) => (

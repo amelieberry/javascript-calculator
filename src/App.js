@@ -1,6 +1,6 @@
 import React from 'react';
-import { operators, numPad, actionsPad } from './data/data';
 import './App.css';
+import KeyPad from './components/keyPad';
 
 function App() {
 
@@ -19,28 +19,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div key="display" id="display"></div>
-        <div className="number-pad">
-          {numPad.map((key) => (
-            <button 
-              id={key.id}
-              key={key.id}
-              onClick={() => console.log(key.id)}
-            >{key.text}</button>
-          )).reverse()}
-        </div>
-        <div className="action-pad">
-          {actionsPad.map((key) => (
-            <button
-            id={key.id}
-            key={key.id}
-            >{key.text}</button>
-          ))}
-        </div>
-        <div className="operator-pad">
-        {operators.map((key) => (
-            <button key={key.id} id={key.id}>{key.text}</button>
-          ))}
-        </div>
+        <KeyPad />
       </div>
     </div>
   );
